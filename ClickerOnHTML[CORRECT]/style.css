@@ -1,0 +1,149 @@
+p, body, button {
+    margin: 0;
+    padding: 0;
+}
+.Play-Display {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.BestScoreBlock{
+    margin: 0 auto;
+    width: 287px;
+
+    background: #847996;
+    border-radius: 4px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.BestScore{
+    font-family: 'Roboto';
+    font-size: 36px;
+    color: #FFFFFF;
+}
+
+#best {
+    font-family: 'Roboto';
+    font-size: 44px;
+    color: #fff;
+}
+
+#time{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 65px;
+    color: #4D243D;
+
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.play-btn{
+    border: 0;
+
+    width: 288px;
+    height: 288px;
+    border-radius: 288px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 60px;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease;
+    background: #D0A98F;
+}
+.play-btn{
+    transition: font-size 0.3s;
+}
+
+.play-btn:hover{
+    background: #b8967f;
+}
+.play-btn:active{
+    font-size: 70px;
+}
+.ResetContainer{
+    margin-bottom: 0 auto; 
+}
+
+.reset{
+    width: 270px;
+    height: 73px;
+
+    margin: 0 auto;
+    margin-top: 40px;
+
+    display: none;
+    background: #6AB980;
+    border-radius: 100px;
+    border: 0px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 36px;
+    transition: background-color 0.3s ease;
+    color: #FFFFFF;
+
+}
+
+.reset:hover{
+    background: #508c61;
+}
+
+@media (max-width: 420px) {  /*Adaptation value according to the terms of reference*/
+    .BestScore {
+        display: block;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .BestScoreContainer{
+        display: block;
+        width: 180px;
+        height: 90px;
+    }
+    #best{
+        display: block;
+        font-size: 28px;
+        padding: 0px 60px 20px;
+    }
+    #time{
+        font-size: 36px;
+    }
+    .play-btn{
+        width: 250px;
+        height: 250px;
+        font-size: 36px;
+    }
+    .reset{
+        width: 180px;
+        height: 70px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 320px){ /*Adaptation for Iphone 5/SE and other phone models with small displays*/
+    .BestScore {
+        display: block;
+        font-size: 15px;
+        margin-top: 13px;
+    }
+    .BestScoreContainer{
+        display: block;
+        width: 160px;
+        height: 70px;
+    }
+    #best{
+        display: block;
+        font-size: 20px;
+        padding: 4px 50px 20px;
+    }
+    #time{
+        font-size: 28px;
+    }
+    .play-btn{
+        width: 220px;
+        height: 220px;
+        font-size: 36px;
+    }
+}
