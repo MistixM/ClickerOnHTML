@@ -82,14 +82,77 @@ p, body, button {
     font-family: 'Roboto';
     font-style: normal;
     font-size: 36px;
-    transition: background-color 0.3s ease;
+    transition: font-size 1s;
     color: #FFFFFF;
 
 }
-
-.reset:hover{
-    background: #508c61;
+.reset {
+    transition: opacity 0.3s ease;
 }
+.reset:hover{
+    font-size: 40px;
+}
+.reset:active{
+    opacity: 0;
+    display: none;
+}
+
+@keyframes birth-anim {
+    0% {
+        transform: translate(50px, 50px);
+    }
+    100% {
+        transform: translate(100px, -200px);
+    }
+}
+@keyframes birth-anim1 {
+    0% {
+        transform: translate(45px, 40px);
+    }
+    100% {
+        transform: translate(85px, -120px);
+    }
+}
+
+@keyframes birth-anim2 {
+    0% {
+        transform: translate(30px, 20px);
+    }
+    100% {
+        transform: translate(50px, -20px);
+    }
+}
+
+.birth-det {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #33ee12;
+
+    animation: birth-anim 3s ease 1 forwards;
+}
+
+.birth-det1 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #1292ee;
+
+    animation: birth-anim1 3s ease 1 forwards;
+}
+
+.birth-det2 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #ee1212;
+
+    animation: birth-anim2 3s ease 1 forwards;
+}
+
 
 @media (max-width: 420px) {  /*Adaptation value according to the terms of reference*/
     .BestScore {
