@@ -1,16 +1,16 @@
-var timer = document.getElementById('time');
-var best_score_element = document.getElementById('best');
+let timer = document.getElementById('time');
+let best_score_element = document.querySelector('#best');
 
-var reset_btn = document.querySelector('.reset');
-var play_btn = document.querySelector('.play-btn');
+let reset_btn = document.querySelector('.reset');
+let play_btn = document.querySelector('.play-btn');
 
-var score_num = 0;
-var start_time = 10;
-var best_score = localStorage.getItem('best') || 0; // get a local storage value 
+let score_num = 0;
+let start_time = 10;
+let best_score = localStorage.getItem('best') || 0; // get a local storage value 
 
-var CanClick = true;
-var isStart = false;
-var CanReset = false;
+let CanClick = true;
+let isStart = false;
+let CanReset = false;
 
 timer.innerText = start_time;
 
@@ -20,6 +20,7 @@ function UpdateBestScore(){
     if (score_num > best_score){
         best_score = score_num;
         localStorage.setItem('best', best_score);
+        best_score_element.id = "best_in_anim" // set new class
     }
     best_score_element.innerText = best_score;
 }
@@ -37,7 +38,7 @@ function OnBtnClicked() {
 }
 
 function StartTimer() {
-    var set_timer_interval = setInterval(UpdateTimer, 1000);
+    let set_timer_interval = setInterval(UpdateTimer, 1000);
 
     function UpdateTimer() {
         start_time--;
@@ -61,6 +62,8 @@ function StartTimer() {
 function OnResetBtnClicked() {
     if(CanReset && !isStart){
         reset_btn.style.display = 'none';
+        best_score_element.id = "best";
+
         score_num = 0;
         start_time = 10;
         
